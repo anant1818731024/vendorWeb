@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Create Vendor</title>
+	<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+	<h1>Create Vendor</h1>
+	<form action="saveVendor" method="post">
+		<div class = "container">
+			<pre>
+			<div><span>Code:</span> <input type="text" name="code"/></div>
+			<div><span>Name:</span> <input type="text" name="name"/></div>
+			<div><span>Type:</span> 
+				  <span>
+					Regular <input type="radio" name="type" value="Regular"/> 
+					Contract <input type="radio" name="type" value="Contract"/>
+				</span></div>
+			<div>	<span>Email:</span> <input type="text" name="email"/></div>
+			<div><span>Phone:</span> <input type="text" name="phone"/></div>
+			<div><span>Address:</span> <input type="text" name="address"/></div>
+			<input type="submit" value="save"/>
+			<a href="/vendorWeb">View All</a>
+			</pre>
+		</div>
+		
+	</form>
+	<br />
+	
+
+</body>
+
+</html>

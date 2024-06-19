@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Update Location</title>
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+	<h1>Update Location</h1>
+
+<form action="updateVendor" method="post">
+<div class = "container">
+	<pre>
+	<input type="text" name="id" th:value="${vendor.id}" style="display: none;">
+	Code: <input type="text" name="code" th:value="${vendor.code}"/>
+	Name: <input type="text" name="name" th:value="${vendor.name}"/>
+	Type: Regular <input type="radio" name="type" value="Regular" th:field="*{vendor.type}"/>
+		Contract <input type="radio" name="type" value="Contract" th:field="*{vendor.type}"/>
+	Email: <input type="text" name="email" 	th:value="${vendor.email}"/>
+	Phone: <input type="text" name="phone" th:value="${vendor.phone}"/>
+	Address: <input type="text" name="address" th:value="${vendor.address}"/>
+	<input type="submit" value="save"/>
+	</pre>
+</div>
+</form>
+
+</body>
+</html>

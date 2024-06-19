@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Locations</title>
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<h2>Vendors:</h2>
+<table>
+<tr>
+<th>id</th>
+<th>code</th>
+<th>name</th>
+<th>type</th>
+<th>email</th>
+<th>phone</th>
+<th>address</th>
+<th>actions</th>
+</tr>
+
+<tr th:each="vendor:${vendors}">
+<td th:text="${vendor.id}"></td>
+<td th:text="${vendor.code}"></td>
+<td th:text="${vendor.name}"></td>
+<td th:text="${vendor.type}"></td>
+<td th:text="${vendor.email}"></td>
+<td th:text="${vendor.phone}"></td>
+<td th:text="${vendor.address}"></td>
+
+<td><a th:href="@{'deleteVendor?id='+${vendor.id}}">Delete</a> <a th:href="@{'showUpdate?id='+${vendor.id}}">Edit</a></td>
+</tr>
+</c:forEach>
+</table>
+<a href="showCreateVendor">Add Vendor</a>
+</body>
+</html>
